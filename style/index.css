@@ -4,6 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+p{
+    
+}
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -41,8 +44,12 @@ header {
     justify-content: center !important;
     align-items: center !important;
 }
-
-
+.contenedor__user > p{
+    margin-bottom: 0 !important;
+}
+.contenedor__logo > p{
+    margin-bottom: 0 !important;
+}
 .logo img {
  
  margin-right: 10px;
