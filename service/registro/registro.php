@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         if ($connection->commit()){
-            header('Location: ../index.php?perfil=' . urlencode($fila['profile_id']));
+            header('Location: ../../index.php?perfil=' . $perfil);
 
         }
 
