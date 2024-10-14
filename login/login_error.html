@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <title>Login</title>
+</head>
+<body class="d-flex align-items-center justify-content-center" style="min-height: 100vh; background-color: #f8f9fa;">
+    <main class="container col-lg-12">
+        <section class="container col-lg-6">
+            <div >
+                <div class="row justify-content-center">
+                    <div class="border border-2 p-4 bg-white shadow-sm rounded"> 
+                        <div class="text-center text-black-50 mb-4">
+                           <h3>Ingresar</h3>
+                        </div>
+                        <form action="login.php" method="POST">
+                            <div class="card-body">
+                                <div class="form-group text-start">
+                                    <label for="Usuario" class="text-start">Usuario</label>
+                                    <input class="form-control" type="text" name="user" id="user" required>
+                                </div>
+                                <div class="form-group text-start">
+                                    <label for="pass" class="text-start">Contraseña</label>
+                                    <input class="form-control" type="text" name="pass" id="pass">
+                                </div>
+                            </div>
+                            <div class="card-footer text-start">
+                                <button type="submit" class="btn btn-primary btn-lg mt-2">Ingresar</button>
+                                <a href="../registro.html">Registrarte</a>
+                            </div>
+                            <p>Credenciales no validas</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

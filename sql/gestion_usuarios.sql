@@ -76,9 +76,9 @@ CREATE TABLE `user_profiles` (
   `assigned_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
+
 -- Volcado de datos para la tabla `user_profiles`
---
+
 
 INSERT INTO `user_profiles` (`user_id`, `profile_id`, `assigned_at`) VALUES
 (1, 1, '2024-10-11 03:34:02');
