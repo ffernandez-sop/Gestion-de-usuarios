@@ -12,10 +12,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombreUsuario = $_POST["nombre-usuario"];
     $perfil = $_POST["perfil"];
 
-    // Iniciar transacción
+    
     $connection->begin_transaction();
+    
     try {
-        // 1. Insertar en la tabla users
+    
         $stmt = $connection->prepare(
             "INSERT INTO users (first_name, middle_name, last_name, second_last_name, username, email, password) 
              VALUES (?, ?, ?, ?, ?, ?, ?)"
@@ -28,10 +29,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             throw new Exception("Error en la inserción en users: " . $stmt->error);
         }
 
-        // Obtener el ID del usuario recién insertado
         $user_id = $connection->insert_id;
 
-        // 2. Insertar en la tabla user_profile
+        
         $stmt = $connection->prepare("INSERT INTO user_profiles (user_id, profile_id) VALUES (?, ?)");
         $stmt->bind_param("ii", $user_id, $perfil);
 
@@ -41,8 +41,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             throw new Exception("Error en la inserción en user_profile: " . $stmt->error);
         }
 
-        // Confirmar la transacción
-        $connection->commit();
+        if ($connection->commit()){
+            header('Location: ../index.php?perfil=' . urlencode($fila['profile_id']));
+
+        }
 
     } catch (Exception $e) {
         // Si algo falla, hacer rollback de todas las consultas
