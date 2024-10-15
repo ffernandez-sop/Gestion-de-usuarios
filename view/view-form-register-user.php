@@ -114,7 +114,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     </main>
 
     <footer>
-        <p>&copy; 2024 Mi Empresa. Todos los derechos reservados.</p>
+        <p>&copy; 2024. Todos los derechos reservados.</p>
     </footer>
     <script src="../js/bootstrap.min.js"></script>
 </body>
