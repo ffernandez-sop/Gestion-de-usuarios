@@ -49,6 +49,8 @@ if($_SERVER["REQUEST_METHOD"] == "GET"){
     
 </head>
 <body>
+   
+    <header>
     <div class="logo">
         <div class="contenedor__logo">
             <img src="../img/logo.png" alt="image" width="70">
@@ -58,8 +60,6 @@ if($_SERVER["REQUEST_METHOD"] == "GET"){
             <p>Bienvenido: <?=  $_SESSION['username'] ?></p>
         </div>
     </div>
-    <header>
-        
         <nav>
             <ul class="menu">
                 <li class="dropdown">
@@ -136,7 +136,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET"){
     </main>
 
     <footer>
-        <p>&copy; 2024 Mi Empresa. Todos los derechos reservados.</p>
+        <p>&copy; 2024. Todos los derechos reservados.</p>
     </footer>
     <script src="../js/bootstrap.min.js"></script>
 </body>

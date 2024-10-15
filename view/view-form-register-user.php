@@ -21,6 +21,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     
 </head>
 <body>
+   
+    <header>
     <div class="logo">
         <div class="contenedor__logo">
             <img src="../img/logo.png" alt="image" width="70">
@@ -30,7 +32,6 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             <p>Bienvenido: <?= $_SESSION['username'] ?> </p>
         </div>
     </div>
-    <header>
         
         <nav>
             <ul class="menu">
